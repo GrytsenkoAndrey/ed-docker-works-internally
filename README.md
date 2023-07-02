@@ -46,3 +46,56 @@ Here is a nice diagram from Whizlabs which shows how Docker works and how images
 
 ![3](/img/3.webp)
 
+## 3 Images and Layers
+
+To truly understand Docker’s inner workings, we need to explore the concept of Docker images.
+
+An image is a read-only template that contains everything needed to run an application, including the code, runtime environment, libraries, and dependencies.
+
+Docker images are built using a layered file system, with each layer representing a change or modification made to the image. This layering mechanism allows for efficient storage and sharing of common components across multiple images, reducing redundancy and improving performance.
+
+Here is another nice diagram which explains the relationship between Docker file, Docker Image and Docker Container:
+
+![4](/img/4.webp)
+
+## 4 The Dockerfile
+
+The Dockerfile acts as a blueprint for building Docker images. It is a text file that specifies the instructions needed to create an image. These instructions include defining the base image, adding dependencies, copying files, exposing ports, and executing commands during the image build process.
+
+Docker intelligently caches intermediate layers based on the Dockerfile instructions, speeding up subsequent builds and minimizing redundancy.
+
+Here is a sample of DockerFile you can see the content:
+
+![5](/img/5.webp)
+
+## 5 Container Runtimes
+
+When a Docker image is run, it is instantiated as a container using a container runtime. Docker supports multiple container runtimes, with Docker Engine (using the default runtime called runc) being the most common.
+
+The container runtime creates an isolated environment, sets up namespaces, allocates resources, manages networking, and controls access to system resources, ensuring containers remain isolated from each other and the host system.
+
+![6](/img/6.webp)
+
+## 6 Container Orchestration and Networking
+
+Docker’s versatility extends beyond running individual containers. It provides powerful orchestration tools, such as Docker Swarm and Kubernetes, that enable the management of containerized applications at scale.
+
+These tools facilitate the deployment, scaling, and load balancing of containers across a cluster of machines, ensuring high availability and fault tolerance.
+
+Docker also provides networking capabilities, allowing containers to communicate with each other and the outside world through virtual networks, ports, and routing.
+
+Here is a nice diagram of using containers at scale:
+
+![7](/img/7.webp)
+
+## Conclusion
+
+That’s all about how Docker works internally. Docker has fundamentally transformed the way we develop, package, and deploy software applications.
+
+By understanding its internal workings, we gain insights into the underlying technology that has brought containerization to the forefront of modern software engineering. From the client-server architecture to the layered image system and container runtimes, Docker’s elegant design and powerful features make it an indispensable tool for developers and operations teams worldwide.
+
+As the world of software continues to evolve, Docker remains at the forefront, enabling efficient and scalable application deployment in an ever-changing landscape.
+
+As I said before, this is also an important topic for interviews and knowing How Docker works can help you showcase your skill on interview as well.
+
+By the way, if you are preparing for interviews then along with this, you can also prepare questions like [difference between API Gateway and Load Balancer](https://medium.com/javarevisited/difference-between-api-gateway-and-load-balancer-in-microservices-8c8b552a024), Kafka vs RabbitMQ, [JWT vs OAuth](https://medium.com/javarevisited/difference-between-jwt-oauth-and-saml-for-authentication-and-authorization-in-web-apps-75b412754127), how to manage transactions in Microservices, and difference between SAGA and CQRS Pattern as well, they are quite popular on interviews.
