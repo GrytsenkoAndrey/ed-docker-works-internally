@@ -34,3 +34,15 @@ Here is a nice diagram which also shows clear difference between Virtual Machine
 
 ![2](/img/2.webp)
 
+## 2 Docker Architecture
+
+At the core of Docker’s architecture is a client-server model that consists of three key components: the Docker client, the Docker daemon, and the Docker registry.
+
+The Docker client acts as the primary interface through which users interact with Docker, while the Docker daemon is responsible for building, running, and managing containers.
+
+The Docker registry serves as a centralized repository for storing Docker images, which are the building blocks for containers. It’s similar to NPM which host node packages or Maven repository which stores JAR files for many Java libraries.
+
+Here is a nice diagram from Whizlabs which shows how Docker works and how images are pulled from registry during Docker build process.
+
+![3](/img/3.webp)
+
