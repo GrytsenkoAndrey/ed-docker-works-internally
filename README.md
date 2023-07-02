@@ -20,3 +20,17 @@ By the way, If you are preparing for interviews then you will be glad to know th
 
 And , if you are not a Medium member then I highly recommend you to join Medium and read great stories from great authors from real field without interruptions. You can join Medium here
 
+## How Docker works internally?
+
+Now that we know what is Docker and what benefits it offer, let’s go into important details one by one.
+
+## 1 What is Containers? How they work?
+
+Before diving into Docker’s internal mechanisms, let’s first grasp the concept of containers. In simple terms, a container is an isolated and lightweight runtime environment that encapsulates an application and its dependencies.
+
+Unlike traditional virtualization, where a full-fledged operating system is emulated, containers share the host system’s kernel, leading to more efficient resource utilization.
+
+Here is a nice diagram which also shows clear difference between Virtual Machine, Hypervisor and Container.
+
+![2](/img/2.webp)
+
